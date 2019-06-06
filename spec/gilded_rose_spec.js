@@ -18,5 +18,10 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(19);
   });
 
+  it("lower Quality value by 2 each day Once the sell by date has passed", function() {
+    const gildedRose = new Shop([ new Item("foo", 0, 20) ]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toEqual(18);
+  });
 
 });
