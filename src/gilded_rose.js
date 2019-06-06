@@ -20,11 +20,11 @@ class Shop {
   }
 
   alterItemQuality(item) {
-    item.sellIn = item.sellIn - 1;
+    item.sellIn --;
 
     if (item.quality > 0 && item.quality < 50) {
       if (item.name == 'Aged Brie') {
-        item.quality = item.quality + 1;
+        item.quality ++;
       } else {
         if(item.sellIn >= 0){
           this.changeItemQualityBeforeSale(item)
@@ -36,26 +36,29 @@ class Shop {
   }
 
   changeItemQualityBeforeSale(item){
-    if (item.name != 'Backstage passes to a TAFKAL80ETC concert') {
-      item.quality = item.quality - 1;
-    } else {
-      item.quality = item.quality + 1;
-      if (item.name == 'Backstage passes to a TAFKAL80ETC concert') {
-        if (item.sellIn < 11) {
-          item.quality = item.quality + 1;
-        }
-        if (item.sellIn < 6) {
-          item.quality = item.quality + 1;
-        }
+    if (item.name == 'Backstage passes to a TAFKAL80ETC concert') {
+      if(item.sellIn > 10){
+        item.quality ++;
+      } else if (item.sellIn > 5 && item.sellIn <= 10){
+        item.quality += 2;
+      } else {
+        item.quality += 3;
       }
+    } else if(item.name == 'Conjured Items'){
+      item.quality -= 2;
+    }
+    else {
+      item.quality --;
     }
   }
 
   changeItemQualityAfterSale(item){
     if (item.name == 'Backstage passes to a TAFKAL80ETC concert') {
       item.quality = 0;
+    } else if(item.name == 'Conjured Items'){
+      item.quality -= 4;
     } else {
-      item.quality = item.quality - 2;
+      item.quality -= 2;
     }
   }
 }

@@ -78,4 +78,16 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(0);
   });
 
+  it("'Conjured Items', Quality drops by 2 before sale ", function() {
+    const gildedRose = new Shop([ new Item("Conjured Items", 10, 20) ]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toEqual(18);
+  });
+
+  it("'Conjured Items', Quality drops by 4 after sale ", function() {
+    const gildedRose = new Shop([ new Item("Conjured Items", 0, 20) ]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toEqual(16);
+  });
+
 });
