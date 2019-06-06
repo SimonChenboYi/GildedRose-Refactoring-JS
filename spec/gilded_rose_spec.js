@@ -24,4 +24,10 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(18);
   });
 
+  it("has quality value never been nagtive", function() {
+    const gildedRose = new Shop([ new Item("foo", 10, 0) ]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].quality).toEqual(0);
+  });
+
 });
