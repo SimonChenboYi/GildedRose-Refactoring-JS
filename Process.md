@@ -54,3 +54,10 @@ We have recently signed a supplier of conjured items. This requires an update to
 9. As a manager    
    So I can manage the selling prices  
    I would like the 'Backstage passes' to has Quality increasing by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after SellIn being 0 or lower.
+
+
+### Approach
+
+1. Adding test to cover each methods and features
+2. Refactor based on user stories/features
+2. extend the code (Tdd)
