@@ -54,3 +54,11 @@ We have recently signed a supplier of conjured items. This requires an update to
 9. As a manager    
    So I can manage the selling prices  
    I would like the 'Backstage passes' to has Quality increasing by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after SellIn being 0 or lower.
+
+
+### CRC
+
+![image](https://user-images.githubusercontent.com/47269063/59032790-034a9180-885f-11e9-89f9-e4b49461881f.png)
+
+### Approach
+1. Refactor the Item class
