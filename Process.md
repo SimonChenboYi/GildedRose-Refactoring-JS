@@ -55,10 +55,21 @@ We have recently signed a supplier of conjured items. This requires an update to
    So I can manage the selling prices  
    I would like the 'Backstage passes' to has Quality increasing by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after SellIn being 0 or lower.
 
+10. As a manager
+    So I can manage the selling prices
+    I would like “Conjured” items degrade in Quality twice as fast as normal items
 
-### CRC
-
-![image](https://user-images.githubusercontent.com/47269063/59032790-034a9180-885f-11e9-89f9-e4b49461881f.png)
 
 ### Approach
-1. Refactor the Item class
+
+1. Adding test to cover each methods and features
+2. Refactor based on user stories/features
+3. extend the code (Tdd)
+
+
+#### Refactor:
+1. extra the update each item from update all items and leave the timeless item in condition statement.
+2. extra the common rule on the range of quality to the most outer layer of condition statement.
+3. extra the case of 'Aged Brie' as its change pattern is not affected by the range of SellIn.
+4. extra the change patterns before sale and after sale into two methods.
+5. Tidy up each method to make sure the each method has no more than two layers condition statements.
