@@ -4,4 +4,10 @@ describe("Merchandise", function() {
     const item = new Item("Cake", 5, 20)
     expect(item.alterSellin(-1)).toEqual(4);
   });
+
+  it("alter the quality", function() {
+    const item = new Item("Cake", 5, 20)
+    expect(item.alterQuality(-1)).toEqual(19);
+  });
+
 });

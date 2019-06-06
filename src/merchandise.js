@@ -9,4 +9,8 @@ class Item {
     return this.sellIn += sellInChange
   }
 
+  alterQuality(qualityChange){
+    return this.quality += qualityChange
+  }
+
 }
