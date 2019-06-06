@@ -48,6 +48,12 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(80);
   });
 
+  it("'Sulfuras, Hand of Ragnaros', never sale", function() {
+    const gildedRose = new Shop([ new Item("Sulfuras, Hand of Ragnaros", 10, 80) ]);
+    const items = gildedRose.updateQuality();
+    expect(items[0].sellIn).toEqual(10);
+  });
+
   it("'Backstage passes', Quality increases by 1 when there are more than 10 days ", function() {
     const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20) ]);
     const items = gildedRose.updateQuality();
