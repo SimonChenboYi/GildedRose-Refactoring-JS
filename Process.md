@@ -60,4 +60,10 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 1. Adding test to cover each methods and features
 2. Refactor based on user stories/features
-2. extend the code (Tdd)
+3. extend the code (Tdd)
+
+
+Refactor:
+1. extra the update each item from update all items and leave the timeless item in condition statement
+2. extra the common rule on the range of quality to the most outer layer of condition statement
+3. extra the case of 'Aged Brie' as its change pattern is not affected by the range of SellIn  
