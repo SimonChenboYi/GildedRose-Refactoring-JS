@@ -40,6 +40,7 @@ copy the full path of SpecRunner.html to the url bar on the chrome to the the Te
 1. Adding test to cover each methods and features
 2. Refactor based on user stories/features
 3. extend the code (Tdd)
+4. Further refactoring
 
 
 #### Refactor:
@@ -48,3 +49,5 @@ copy the full path of SpecRunner.html to the url bar on the chrome to the the Te
 3. extra the case of 'Aged Brie' as its change pattern is not affected by the range of SellIn.
 4. extra the change patterns before sale and after sale into two methods.
 5. Tidy up each method to make sure the each method has no more than two layers condition statements.
+6. refactor further to have only one layer condition statement.
+7. Rearrange to make the method case/object orientated.

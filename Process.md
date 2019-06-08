@@ -73,3 +73,5 @@ We have recently signed a supplier of conjured items. This requires an update to
 3. extra the case of 'Aged Brie' as its change pattern is not affected by the range of SellIn.
 4. extra the change patterns before sale and after sale into two methods.
 5. Tidy up each method to make sure the each method has no more than two layers condition statements.
+6. refactor further to have only one layer condition statement.
+7. Rearrange to make the method case/object orientated.
